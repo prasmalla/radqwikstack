@@ -1,6 +1,6 @@
 {
-  "name": "my-qwik-empty-starter",
-  "description": "App with Routing built-in ready to create your app",
+  "name": "radqwikstack",
+  "description": "Radix frontend built with Qwik + shadcn/ui",
   "engines": {
     "node": ">=15.0.0"
   },
@@ -15,7 +15,7 @@
     "build.preview": "vite build --ssr src/entry.preview.tsx",
     "build.types": "tsc --incremental --noEmit",
     "deploy": "echo 'Run \"npm run qwik add\" to install a server adapter'",
-    "dev": "vite --mode ssr",
+    "dev": "vite --mode ssr --host",
     "dev.debug": "node --inspect-brk ./node_modules/vite/bin/vite.js --mode ssr --force",
     "fmt": "prettier --write .",
     "fmt.check": "prettier --check .",
@@ -35,7 +35,7 @@
     "eslint-plugin-qwik": "^1.4.3",
     "prettier": "^3.2.4",
     "typescript": "5.3.3",
-    "undici": "*",
+    "undici": "^6.5.0",
     "vite": "^5.0.12",
     "vite-tsconfig-paths": "^4.2.1"
   }
