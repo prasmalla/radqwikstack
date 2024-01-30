@@ -4,9 +4,11 @@ import {
   RouterOutlet,
   ServiceWorkerRegister,
 } from "@builder.io/qwik-city";
-import { RouterHead } from "./components/router-head/router-head";
+import { RouterHead } from "~/components/router-head/router-head";
+import { ThemeProvider } from "~/components/theme-provider";
 
 import "./global.css";
+import { ModeToggle } from "./components/mode-toggle";
 
 export default component$(() => {
   /**
@@ -24,8 +26,19 @@ export default component$(() => {
         <RouterHead />
       </head>
       <body lang="en">
-        <RouterOutlet />
-        <ServiceWorkerRegister />
+        <ThemeProvider defaultTheme="light" storageKey="vite-ui-theme">
+          <div class="bg-gray-100 dark:bg-gray-900 h-svh">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
+              <div class="header absolute right-3 top-3">
+                <ModeToggle client:only />
+              </div>
+              <div class="max-w-3xl mx-auto py-16 sm:py-24">
+                <RouterOutlet />
+              </div>
+            </div>
+          </div>
+          <ServiceWorkerRegister />
+        </ThemeProvider>
       </body>
     </QwikCityProvider>
   );
