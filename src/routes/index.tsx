@@ -4,9 +4,9 @@ import type { DocumentHead } from "@builder.io/qwik-city";
 export default component$(() => {
   return (
     <>
-      <h1>Hi 👋</h1>
+      <h1 class="text-3xl">Hi 👋</h1>
       <p>
-        Can't wait to see what you build with qwik!
+        Can't wait to see what you build with RadixDLT + Qwik!
         <br />
         Happy coding.
       </p>
