@@ -72,5 +72,8 @@
   }
   body {
     @apply bg-background text-foreground;
+    --radix-connect-button-width: 135px;
+    --radix-connect-button-height: 42px;
+    --radix-connect-button-border-radius: 12px;
   }
 }
